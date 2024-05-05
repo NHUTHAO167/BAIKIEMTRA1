@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Như Thảo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="snow">
+        <div class="snow"></div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="front">
+            <h2>Nguyễn Thị Như Thảo</h2>
+            <p>Ngày sinh: 16.07.2003 <br> Quê quán: Tây Ninh </p>
+            <button>Xem ngay</button>
+          </div>
+          <div class="back">
+            <img src="waving-hand.png" alt="" />
+            <h1>Nguyễn Thị <span>Như Thảo</span></h1>
+            <p>
+              Sinh viên trường Đại học Công nghiệp TPHCM <br>
+              Năm: 3 <br>
+              Chuyên ngành: Thương mại điện tử 
+            </p>
+            <div class="row">
+              <div class="col">
+                <h2>10K</h2>
+                <p>Followers</p>
+              </div>
+              <div class="col">
+                <h2>250</h2>
+                <p>Following</p>
+              </div>
+              <div class="col">
+                <h2>4K</h2>
+                <p>Likes</p>
+              </div>
+            </div>
+            <div class="row">
+              <button>Follow</button>
+              <a href="https://www.instagram.com/nthao3716/">
+                <img src="./instagram.png" alt="" />
+              </a>
+              <a href="https://www.pinterest.com/thinhuthao1705/">
+                <img src="./pinterest.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let container = document.getElementById("snow");
+      for (var i = 0; i < 60; i++) {
+        let leftSnow = Math.floor(Math.random() * container.clientWidth);
+        let topSnow = Math.floor(Math.random() * container.clientHeight);
+        let widthSnow = Math.floor(Math.random() * 50);
+        let timeSnow = Math.floor(Math.random() * 5 + 5);
+        let blurSnow = Math.floor(Math.random() * 10);
+        console.log(leftSnow);
+        let div = document.createElement("div");
+        div.classList.add("snow");
+        div.style.left = leftSnow + "px";
+        div.style.top = topSnow + "px";
+        div.style.width = widthSnow + "px";
+        div.style.height = widthSnow + "px";
+        div.style.animationDuration = timeSnow + "s";
+        // div.style.filter = "blur(" + blurSnow + "px)";
+        container.appendChild(div);
+      }
+    </script>
+  </body>
+</html>
